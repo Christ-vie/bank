@@ -38,7 +38,7 @@ public class AccountServiceImpl implements AccountService {
     public Account updateAccount(Account account) {
         if (!isAccountExists(account.getAccountId()))
             throw new RuntimeException("Account not found");
-        account.setDate(new Date());
+        account.setLastUpdate(new Date());
         return accountRepository.save(account);
     }
 

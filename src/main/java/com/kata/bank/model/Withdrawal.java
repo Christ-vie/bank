@@ -11,7 +11,7 @@ import java.util.Date;
 @Entity
 @NoArgsConstructor
 @Data
-@Table(name = "WITHDRAWAL")
+@Table(name="WITHDRAWAL")
 public class Withdrawal extends Operation {
     @Builder
     public Withdrawal(Date operationDate, double amount, Account account) {

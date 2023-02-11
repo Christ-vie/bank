@@ -1,6 +1,6 @@
 package com.kata.bank.repositories;
 
-import jdk.dynalink.Operation;
+import com.kata.bank.model.Operation;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

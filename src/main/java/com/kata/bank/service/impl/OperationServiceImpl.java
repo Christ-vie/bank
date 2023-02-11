@@ -22,11 +22,12 @@ public class OperationServiceImpl implements OperationService {
 
     @Autowired
     private final OperationRepository operationRepository;
+    @Autowired
     private final AccountRepository accountRepository;
 
-    @Override
+    
     public Optional<Operation> findById(long id) {
-        return operationRepository.findBy(id);
+        return operationRepository.findById(id);
     }
 
 
@@ -35,11 +36,11 @@ public class OperationServiceImpl implements OperationService {
         return operationRepository.findAll();
     }
 
-  /*  @Override
+    @Override
     public List<Operation> findAllOperationsByAccount(String accountId) {
         return operationRepository.findAllByAccountId(accountId);
     }
-*/
+
     @Override
     public void deposit(String accountId, double amount) {
         Account currentAccount = getAccount(accountId);
@@ -69,7 +70,7 @@ public class OperationServiceImpl implements OperationService {
     }
 
     @Override
-    public void saveOperation(Operation operation) {
+    public Operation saveOperation(Operation operation) {
        return operationRepository.save(operation);
     }
 

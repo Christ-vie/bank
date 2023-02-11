@@ -20,6 +20,6 @@ public interface OperationService {
 
     void payment(String accountTransmitter, String accountBeneficiary, double amount);
 
-    void saveOperation(Operation operation);
+    Operation saveOperation(Operation operation);
 
 }

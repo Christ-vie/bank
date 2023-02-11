@@ -18,10 +18,10 @@ import java.util.Date;
 public abstract class Operation implements Serializable {
     @Id
     @GeneratedValue
-    @Column(name = "OPERATION_ID", nullable = false)
+    @Column(name="OPERATION_ID", nullable = false)
     private Long operationId;
 
-    @Column(name = "OPERATION_DATE")
+    @Column(name="OPERATION_DATE")
     private Date operationDate;
 
     @Column(name = "AMOUNT")

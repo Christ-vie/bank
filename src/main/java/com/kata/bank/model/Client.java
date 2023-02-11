@@ -11,22 +11,20 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 @AllArgsConstructor
-@Table(name = "Client")
+@Table(name="Client")
 public class Client implements Serializable {
     @Id
     @GeneratedValue
-    @Column(name = "CLIENT_ID", nullable = false)
+    @Column(name="CLIENT_ID", nullable = false)
     private Long clientId;
 
-    @Column(name = "NAME")
+    @Column(name="NAME")
     private String name;
-    @Column(name = "LAST_UPDATE")
+    @Column(name="LAST_UPDATE")
     private Date lastUpdate;
-    @Column(name = "EMAIL")
+    @Column(name="EMAIL")
     private String email;
     @OneToMany(mappedBy = "client", fetch = FetchType.LAZY)
     private List<Account> accounts;
-
-
 
 }

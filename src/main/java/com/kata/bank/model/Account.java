@@ -13,26 +13,30 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name= "Account")
+@Table(name="ACCOUNT")
 public class Account implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column (name = "first_name")
+    @GeneratedValue
+    @Column(name="ACCOUNT_ID", nullable = false)
     private String accountId;
-    @Column (name = "date")
-    private Date date;
-    @Column(name = "Amount")
-    private Double amount;
-    @Column(name = "Balance")
-    private Double balance;
-    @Column(name = "DISCOVERED")
+
+    @Column(name="CREATION_DATE")
+    private Date creationDate;
+
+    @Column(name="LAST_UPDATE")
+    private Date lastUpdate;
+
+    @Column(name="BALANCE")
+    private double balance;
+
+    @Column(name="DISCOVERED")
     private double discovered;
+
     @ManyToOne
-    @JoinColumn(name = "CLIENT")
+    @JoinColumn(name="CLIENT")
     private Client client;
 
-    @OneToMany(mappedBy = "account")
+    @OneToMany(mappedBy="account")
     private List<Operation> operations;
-
 
 }
