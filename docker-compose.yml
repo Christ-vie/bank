@@ -1,0 +1,8 @@
+version: "3"
+services:
+  springboot-app:
+    container_name: bank
+    image: springboot/8-jdk-alpine-maven
+    build: .
+    ports:
+      - 8080:8080
